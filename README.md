@@ -5,7 +5,7 @@ Google colab python scripts for image processing (vid to img + img to vid). To b
 
 | Colab Page | Function
 | --- | --- |
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/redrawjam/mediaconversion/blob/main/Video_to_Image_Array_JRR.ipynb)]{:target="_blank"}] | Video to image
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/redrawjam/mediaconversion/blob/main/Video_to_Image_Array_JRR.ipynb) | Video to image
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/redrawjam/mediaconversion/blob/main/Image_Array_to_Video_JRR.ipynb) | Image to video
 
 ## Tutorials
