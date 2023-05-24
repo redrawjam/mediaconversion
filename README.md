@@ -1,38 +1,41 @@
-# videotoimage
-A google colab python script, to convert a video in an input folder into an image array in an output folder.
+# Conversion scripts
+Google colab python scripts for image processing (vid to img + img to vid). To be use in conjuction with stable diffusions batch processing image to image functionality with controlnet. In order to convert simple video into animated diffusion style videos. Utilising cloud services by using google drive as the input and output directories.
 
-## 🦒 Install the WebUI Colab to Google Drive
+## 🦒 Links to open the scripts in Colab.
 
 | Colab Page | Function
 | --- | --- |
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/camenduru/stable-diffusion-webui-colab/blob/drive/install.ipynb) | One Time Install & Update
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/camenduru/stable-diffusion-webui-colab/blob/drive/run.ipynb) | Run
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/camenduru/stable-diffusion-webui-colab/blob/drive/add.ipynb) | Add Model
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/18Yf4p23C5oXni98Gbdn7jz9Zx4eYq2aI?usp=sharing) | Video to image
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1h5QNzgCZfJDskGExA9F7n2ZH1l-lxdvf?usp=sharing) | Image to video
 
 ## Tutorials
-Stable Diffusion WebUI Colab With Google Drive: https://www.youtube.com/watch?v=njW64feGMzI
+Video tutorials:
+- Full conversion process: https://www.youtube.com/
+- Video to image usage: https://www.youtube.com/
+- Image to video usage: https://www.youtube.com/
 
-🚨 Important for 15G Free Google Drive Users: 
 
-If you have enough space, remove the # character before the line
- 
-![image](https://user-images.githubusercontent.com/54370274/235278379-b7993166-e09d-48b9-ac0f-673a1262fcfd.png)
+🚨 Important things to note: 
 
-If you want to use more models, you can download your model into Colab, which has an empty 50GB space. 
-
-Download models into `/content/models` WebUI automaticly will find your models under `/content/models` and `/content/drive/MyDrive/stable-diffusion-webui-colab/stable-diffusion-webui/models/Stable-diffusion`
-
-![Screenshot 2023-03-20 133516](https://user-images.githubusercontent.com/54370274/226315414-2dcc8308-c15f-4a96-8d75-507e46d5b1bc.png)
-
+1) You need to ensure the video file you place in the input directory is titled 'My_video.mp4', as specified in the following line of code (for the video to image script):
 ```py
-!aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/andite/pastel-mix/resolve/main/pastelmix-fp16.ckpt -d /content/models -o pastelmix-fp16.ckpt
-!aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/hakurei/waifu-diffusion-v1-4/resolve/main/vae/kl-f8-anime2.ckpt -d /content/models -o pastelmix-fp16.vae.pt
+# Set up video path
+video_path = '/content/drive/MyDrive/conversion/videoconverter/videoinput/my_video.mp4'
+```
+![image](https://github.com/redrawjam/videotoimage/assets/34511774/79c1f4da-347d-4fce-850c-8f171775e847)
+
+3) All the directories can be changed. Using the following code snippet as an example:
+```py
+# Set up video path
+video_path = '/content/drive/MyDrive/conversion/videoconverter/videoinput/my_video.mp4'
 ```
 
-You can also free up more space by deleting the default model in your drive.
+Throughout all scripts a path is set. For usage with google drive the core component of the directory is `/content/drive/MyDrive/...` 
+What follows after the initial conponent is up the the user (you). Here are some examples for video output directories:
+1) `/content/drive/MyDrive/conversion/videoconverter/finalvideo/`
+2) `/content/drive/MyDrive/conversion/videoconverter/bestvideo/`
+4) `/content/drive/MyDrive/conversion/videos/`
+5) `/content/drive/MyDrive/videos`
+6) `/content/drive/MyDrive/edits`
 
-![Screenshot 2023-02-24 140908](https://user-images.githubusercontent.com/54370274/221165025-706b6385-8cb2-4fe1-9334-2762013b9dce.png)
 
-If you don't plan to use ControlNet models, you can also free up space by deleting them. (thanks to twitter@muadoyoki ❤)
-
-![Screenshot 2023-02-24 141259](https://user-images.githubusercontent.com/54370274/221165764-b4db7c3c-0cc9-4976-a922-395bb72a002d.png)
