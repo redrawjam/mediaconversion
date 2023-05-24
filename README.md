@@ -14,11 +14,49 @@ Video tutorials:
 - Video to image usage: https://www.youtube.com/
 - Image to video usage: https://www.youtube.com/
 
-Text tutorials:
-- Video to image usage
-- Image to video usage
+## Text tutorials:- Video to image usage:
+1) Find or create a video in an mp4 format (using the .mp4 file extension).
+2) Rename the video file to 'my_video.mp4'.
+3) Place the video inside the video input directory in google drive. The directory is defined as the following by default: '/content/drive/MyDrive/conversion/videoconverter/videoinput/my_video.mp4'
+---
+![image](https://github.com/redrawjam/videotoimage/assets/34511774/7982c0b8-0e42-4af1-ae6e-e17ca54a65bc)
+---
+4) Run the Colab script.
+---
+![image](https://github.com/redrawjam/videotoimage/assets/34511774/64e6c13e-74d3-4ff3-b83d-96165dba3b67)
+---
+5) Confirm/ connect your google drive account.
+---
+![image](https://github.com/redrawjam/videotoimage/assets/34511774/0b62df44-55fa-45bc-b5d2-5a3252e50237)
+---
+6) Let it cook (takes a minute depending on the size of the video it is breaking down)
+7) Check the output at the base of the Colab notebook script (should show the number of frames extracted and confirm where it was extracted to)
+---
+![image](https://github.com/redrawjam/videotoimage/assets/34511774/8de717c1-e6b7-4d57-b679-b6941fddef05)
+![image](https://github.com/redrawjam/videotoimage/assets/34511774/33ea1b81-74ef-4e19-80d7-875b3631ea8f)
+---
 
-🚨 Important things to note: 
+## Text tutorials:- Image to video usage
+1) Ensure you have placed your image array a specified input directory on google drive. The directory is defined as the following by default: '/content/drive/MyDrive/conversion/imageconverter/imageinput/'
+---
+
+--- 
+4) Run the Colab script.
+---
+![image](https://github.com/redrawjam/videotoimage/assets/34511774/64e6c13e-74d3-4ff3-b83d-96165dba3b67)
+---
+3) Confirm/ connect your google drive account.
+---
+![image](https://github.com/redrawjam/videotoimage/assets/34511774/0b62df44-55fa-45bc-b5d2-5a3252e50237)
+---
+4) Let it cook (takes a minute depending on the size of the video it is breaking down)
+5) Check the output at the base of the Colab notebook script (should show the number of frames extracted and confirm where it was extracted to)
+---
+![image](https://github.com/redrawjam/videotoimage/assets/34511774/8de717c1-e6b7-4d57-b679-b6941fddef05)
+---
+
+
+## Important things to note: 
 
 1) You need to ensure the video file you place in the input directory is titled 'My_video.mp4', as specified in the following line of code (for the video to image script):
 ```py
