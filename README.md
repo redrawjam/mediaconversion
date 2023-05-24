@@ -10,10 +10,13 @@ Google colab python scripts for image processing (vid to img + img to vid). To b
 
 ## Tutorials
 Video tutorials:
-- Full conversion process: https://www.youtube.com/
+- Full conversion process (including stable diffuison control net conversion): https://www.youtube.com/
 - Video to image usage: https://www.youtube.com/
 - Image to video usage: https://www.youtube.com/
 
+Text tutorials:
+- Video to image usage
+- Image to video usage
 
 🚨 Important things to note: 
 
@@ -22,7 +25,16 @@ Video tutorials:
 # Set up video path
 video_path = '/content/drive/MyDrive/conversion/videoconverter/videoinput/my_video.mp4'
 ```
-![image](https://github.com/redrawjam/videotoimage/assets/34511774/79c1f4da-347d-4fce-850c-8f171775e847)
+![image](https://github.com/redrawjam/videotoimage/assets/34511774/4768ae5b-5cf9-463e-80f0-750e1a2fea52)
+
+2) You need to ensure you enter the correct number of frames being converted into a video (for the image to video script):
+Here I have it set to 216 frames. Update that value as needed.
+```py
+#modify the range variable below to match the number of input frames
+for i in range(216):
+```
+![image](https://github.com/redrawjam/videotoimage/assets/34511774/4157171c-16e5-4515-9a48-5db2f2315936)
+![image](https://github.com/redrawjam/videotoimage/assets/34511774/ac1f5802-7c4a-49ec-9d2f-c8fd9562e07f)
 
 3) All the directories can be changed. Using the following code snippet as an example:
 ```py
